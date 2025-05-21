@@ -11,7 +11,7 @@ void init()
         "8B CF E8 ? ? ? ? E8 ? ? ? ? 80 3D ? ? ? ? ? 75 1E E8 ? ? ? ? 84 C0 74 15 E8 ? ? ? ? 84 C0 74 0C E8 ? ? ? ? C6 05"
     );
 
-    uintptr_t FinalAddress = reinterpret_cast<uintptr_t>(OnlineTelemetry) - 0x39;//this function is called most of the time Packets or something like that they use this to be on a thread rwx
+    uintptr_t FinalAddress = reinterpret_cast<uintptr_t>(OnlineTelemetry) - 0x39;//this function is called most of the time Packets or something like that they use this to execute what they want
 
     BYTE firstByte = *(BYTE*)FinalAddress;// idk why they dont do that for this function 
     
